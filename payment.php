@@ -16,11 +16,11 @@
 include "./navbar.php";
 
 ?>
-    <div class="container">
-        <h1> ติดต่อเรา </h1>
+<div class="container">
+    <h1> แจ้งชำระเงิน </h1>
 
+</div>
 
-    </div>
 </body>
 
 </html>
