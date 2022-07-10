@@ -17,9 +17,9 @@ include "./navbar.php";
 
 ?>
     <div class="container">
-        <h1> สมัครสมาชิก </h1>
         <div class="row justify-content-center">
             <div class="col-md-4">
+                <h1 class="text-center"> สมัครสมาชิก </h1>
                 <form action="reg_insert.php" method="POST">
                     Username:
                     <input type="text" name="username" class="form-control" />
@@ -32,9 +32,10 @@ include "./navbar.php";
                     อีเมล:
                     <input type="text" name="email" class="form-control" />
                     ที่อยู่:
-                    <textarea type="text" name="address" row="4" class="form-control"></textarea>
-                    <input type="summit" value="บันทึกข้อมูล" class="btn btn-primary" />
-
+                    <textarea name="address" row="4" class="form-control"></textarea>
+                    <div class="pt-2 d-grid">
+                        <input type="submit" valaue="บันทึกข้อมูล" class="btn btn-primary" />
+                    </div>
                 </form>
             </div>
         </div>
