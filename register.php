@@ -34,7 +34,7 @@ include "./navbar.php";
                     ที่อยู่:
                     <textarea name="address" row="4" class="form-control"></textarea>
                     <div class="pt-2 d-grid">
-                        <input type="submit" valaue="บันทึกข้อมูล" class="btn btn-primary" />
+                    <input type="submit" value="บันทึกข้อมูล" class="btn btn-primary" />
                     </div>
                 </form>
             </div>

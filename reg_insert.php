@@ -13,6 +13,7 @@
    
         if( mysqli_query($link, $sql) ){
             echo "บันทึกข้อมูลเรียบร้อย";
+            header("location:users.php");
         }else{
             echo "ไม่สามารถบันทึกข้อมูลได้";
         }
