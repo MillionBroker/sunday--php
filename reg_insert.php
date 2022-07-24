@@ -7,13 +7,25 @@
    $email = $_POST['email'];
    $address = $_POST['address'];
 
+   $filename = $_FILES["uploadfile"]["name"];
+    $tempname = $_FILES["uploadfile"]["tmp_name"];
+    $folder = "./images/" . $filename;
+
+
    if(!empty($username) && !empty($password) && !empty($email)){
-        $sql = "INSERT INTO users(username, password, firstname, lastname, email, address)
-           VALUES('$username','$password','$firstname','$lastname','$email', '$address')";
+        $sql = "INSERT INTO users(username, password, firstname, lastname, email, address,filename)
+           VALUES('$username','$password','$firstname','$lastname','$email', '$address', '$filename')";
    
         if( mysqli_query($link, $sql) ){
+          
+          if (move_uploaded_file($tempname, $folder)) {
             echo "บันทึกข้อมูลเรียบร้อย";
+        } else {
+            echo "ไม่สามารถบันทึกข้มูลได้";
+        }
+            
             header("location:users.php");
+
         }else{
             echo "ไม่สามารถบันทึกข้อมูลได้";
         }

@@ -8,6 +8,7 @@
 <div class="container">
     <table class="table">
         <tr>
+            <th?>ไฟล์</th>
             <th> Username </th>
             <th> Password </th>
             <th> ชื่อ </th>
@@ -20,6 +21,7 @@
     while($row = mysqli_fetch_assoc($result)){
 ?>
         <tr>
+        <td> <img src="./images/<?php echo $row['filename'] ?>" class="img-fluid" /> </td>
             <td><?php echo "$row[username]"; ?></td>
             <td><?php echo "$row[password]"; ?></td>
             <td>

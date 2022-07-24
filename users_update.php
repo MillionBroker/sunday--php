@@ -8,10 +8,16 @@
   $email = $_POST['email'];
   $address = $_POST['address'];
 
+  $filename = $_FILES["uploadfile"]["name"];
+  $tempname = $_FILES["uploadfile"]["tmp_name"];
+  $folder = "./images/" . $filename;
+
   $sql = "UPDATE users SET username='$username', password='$password', firstname='$firstname', lastname='$lastname', email='$email', address='$address' WHERE id='$id'";
   if(mysqli_query($link, $sql)){
     echo "Records were updated successfully.";
     header("location:users.php");
+
+    
   } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
   }
